@@ -3,17 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduBot</title>
+    <title>OrientaBot - Assistant Orientation</title>
     <link rel="stylesheet" href="styles.css">
-   
+    <style>
+        .chat-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .chat-history {
+            height: 400px;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+        }
+        
+        .bot-message {
+            background: #eef2ff;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user-message {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .input-area {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #eee;
+        }
+        
+        #user-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 24px;
+            outline: none;
+        }
+        
+        #send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 24px;
+            padding: 0.8rem 1.5rem;
+            margin-left: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        #send-btn:hover {
+            background: var(--secondary);
+        }
+    </style>
 </head>
 <body>
-    <div id="chat-history"></div>
-    <div>
-        <input type="text" id="user-input" placeholder="Tapez votre message...">
-        <button id="send-btn">Envoyer</button>
-    </div>
+    <header>
+        <a href="index.html" class="back-button">← Retour</a>
+        <h1>OrientaBot Assistant</h1>
+    </header>
 
-    <script type="module" src="script.js"></script>
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Assistant Orientation</h2>
+            </div>
+            <div class="chat-history" id="chat-history"></div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Tapez votre réponse...">
+                <button id="send-btn">Envoyer</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Votre logique de chatbot ici
+        document.addEventListener('DOMContentLoaded', () => {
+            startChat();
+        });
+    </script>
 </body>
 </html>
