@@ -1,0 +1,158 @@
+/* Variables et reset */
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --success: #4cc9f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* Options container */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.option-card {
+    background: white;
+    border-radius: 12px;
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon-container {
+    background-color: #eef2ff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.icon {
+    font-size: 2.5rem;
+}
+
+.option-card h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+img {
+  width: 50px;
+  height: auto; /* Maintient le ratio */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark);
+    color: white;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Styles pour la navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 24px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Style pour la page active */
+nav a[href="index.html"].active,
+nav a[href="chatbot.html"].active,
+nav a[href="quiz.html"].active,
+nav a[href="videos.html"].active {
+    background-color: var(--success);
+    font-weight: bold;
+}
+.bouton-retour {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid #0056b3;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.bouton-retour:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+.bouton-retour:active {
+    background-color: #003d7a;
+}

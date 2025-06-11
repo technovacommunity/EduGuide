@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGuide - Votre guide d'orientation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.jpg" alt="EduGuide Logo" class="logo">
+        <h1>Trouvez votre voie avec EduGuide</h1>
+        <nav>
+        <a href="index.html" class="active">Accueil</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="videos.html">Vidéos</a>
+    </nav>
+    </header>
+    <script type="module">
+    // Chargement dynamique des modules
+    import { startChat } from './script.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        startChat();
+    });
+    </script>
+
+    <main class="options-container">
+        <a href="chatbot.html" class="option-card">
+            <div class="icon-container">
+                <img src="assets/chatbot-icon.png" alt="Chatbot">
+            </div>
+            <h2>Chatbot Orientation</h2>
+            <p>Discutez avec notre IA pour une recommandation personnalisée</p>
+        </a>
+
+        <a href="quiz.html" class="option-card">
+            <div class="icon-container">
+                <span class="icon">📝</span>
+            </div>
+            <h2>Quiz Express</h2>
+            <p>Découvrez vos affinités avec nos tests rapides</p>
+        </a>
+
+        <a href="videos.html" class="option-card">
+            <div class="icon-container">
+                <span class="icon">🎬</span>
+            </div>
+            <h2>Témoignages Étudiants</h2>
+            <p>Inspirez-vous des parcours de nos ambassadeurs</p>
+        </a>
+    </main>
+
+    <footer>
+        <p>Projet d'orientation © 2025 - Développé par TechNova</p>
+    </footer>
+</body>
+</html>
